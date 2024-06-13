@@ -1,0 +1,161 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+#include <iostream>
+
+using namespace std;
+
+struct Food {
+
+    int code;
+
+    string name;
+
+    double price;
+
+};
+
+
+
+struct Drink {
+
+    int code;
+
+    string name;
+
+    double price;
+
+};
+
+
+
+struct Appetizer {
+
+    int code;
+
+    string name;
+
+    double price;
+
+};
+
+
+
+Food foods[] = {
+
+    {1, "kabab", 15000},
+
+    {2, "joje kabab", 20000},
+
+    {3, "kenjeh", 18000},
+
+    
+
+};
+
+
+Drink drinks[] = {
+
+    {1, "Coca-Cola", 150000},
+
+    {2, "Pepsi", 150000},
+
+    {3, "water", 65000},
+
+    
+
+};
+
+
+Appetizer appetizers[] = {
+
+    {1, "mast", 100000},
+
+    {2, "zeyton", 250000},
+
+    {3, "limo", 20000},
+
+    
+
+};
+
+
+const double VAT_RATE = 0.09; 
+
+
+int main() {
+
+    int foodCode, drinkCode, appetizerCode;
+
+    double total = 0;
+
+
+    cout << "Enter food code: ";
+
+    cin >> foodCode;
+
+    cout << "Enter drink code: ";
+
+    cin >> drinkCode;
+
+    cout << "Enter appetizer code: ";
+
+    cin >> appetizerCode;
+
+
+
+    for (int i = 0; i < sizeof(foods) / sizeof(foods[0]); i++) {
+
+        if (foods[i].code == foodCode) {
+
+            total += foods[i].price;
+
+            break;
+
+        }
+
+    }
+
+
+
+    for (int i = 0; i < sizeof(drinks) / sizeof(drinks[0]); i++) {
+
+        if (drinks[i].code == drinkCode) {
+
+            total += drinks[i].price;
+
+            break;
+
+        }
+
+    }
+
+
+
+    for (int i = 0; i < sizeof(appetizers) / sizeof(appetizers[0]); i++) {
+
+        if (appetizers[i].code == appetizerCode) {
+
+            total += appetizers[i].price;
+
+            break;
+
+        }
+
+    }
+
+
+
+    total *= (1 + VAT_RATE);
+
+
+    cout << "Total: " << total << endl;
+
+
+    return 0;
+
+}
