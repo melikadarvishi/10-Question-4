@@ -1,0 +1,31 @@
+#includeiostream
+using namespace std;
+int main()
+{
+        int a,j;
+        coutEnter any num ;
+        cina;
+        for(int i=1;i2a;i++){
+        for(j=1;j=2a+i;j++){
+        cout' ';  
+        } 
+        for(int i=1;i=a;i++){
+        cout'';
+        }
+        coutendl;
+        }
+        for(int i=1;i=5a;i++){
+        cout'';   
+        }
+        coutendl;
+        for(int i=1;i(2a);i++){
+        for(int c=j-i;c0;c--){
+        cout' ';   
+        }
+        for(int i=1;i=a;i++){
+        cout'';  
+        }
+        coutendl;
+        }
+        return 0;
+}
